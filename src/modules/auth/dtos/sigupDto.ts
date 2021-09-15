@@ -1,7 +1,7 @@
 import {IsString,IsNotEmpty} from 'class-validator'
 
 
-export class signupDto{
+class SignupDto{
     
     @IsNotEmpty()
     @IsString()
@@ -13,7 +13,7 @@ export class signupDto{
 
     @IsNotEmpty()
     @IsString()
-    email: string;
+    correo: string;
 
     @IsNotEmpty()
     @IsString()
@@ -23,7 +23,7 @@ export class signupDto{
     @IsString()
     apellido: string;
 
-    
+
     @IsNotEmpty()
     @IsString()
     edad: number;
@@ -41,11 +41,13 @@ export class signupDto{
     ciudad: string;
 
 
-    @IsNotEmpty()
-    @IsString()
-    correo: string;
 
- 
-  completed: boolean;
+
+    completed: boolean;
 
 }
+
+export default SignupDto;
+
+
+

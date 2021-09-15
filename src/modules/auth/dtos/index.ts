@@ -1,2 +1,2 @@
-import {SigninDto} from '../dtos/signin.dto';
-import {signupDto} from '../dtos/sigup.dto';
+import {signinDto} from './signinDto';
+import SignupDto from './sigupDto'
