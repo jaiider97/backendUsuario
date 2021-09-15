@@ -2,7 +2,9 @@ import { Module } from '@nestjs/common';
 import { UsuarioModule } from './usuario/usuario.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AuthModule } from './modules/auth/auth.module';
+import { ConfigModule } from '@nestjs/config';
 
+console.log(process.env.JWT_SECRET)
 
 @Module({
   imports: [
@@ -20,6 +22,7 @@ import { AuthModule } from './modules/auth/auth.module';
       retryDelay: 3000
 
     }),
+  ConfigModule.forRoot(),
   UsuarioModule,
   AuthModule],
   controllers: [],
