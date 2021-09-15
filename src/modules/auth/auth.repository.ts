@@ -27,6 +27,8 @@ export class AuthRepository extends Repository<Usuario> {
      const salt = await genSalt(10);
      user.contraseña= await hash(contraseña,salt);
 
+    await user.save();
+
     }
     
   
