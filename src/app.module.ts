@@ -20,17 +20,7 @@ import { AuthModule } from './modules/auth/auth.module';
       retryDelay: 3000
 
     }),
-
-
-
-
-
   UsuarioModule,
-
-
-
-
-
   AuthModule],
   controllers: [],
   providers: [],
