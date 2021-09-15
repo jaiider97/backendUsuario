@@ -3,8 +3,11 @@ import { UsuarioModule } from './usuario/usuario.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AuthModule } from './modules/auth/auth.module';
 import { ConfigModule } from '@nestjs/config';
+require('dotenv').config();
 
-console.log(process.env.JWT_SECRET)
+
+console.log("variable global",process.env.JWT_SECRET);
+console.log("variable global",process.env.HOST);
 
 @Module({
   imports: [
@@ -22,7 +25,10 @@ console.log(process.env.JWT_SECRET)
       retryDelay: 3000
 
     }),
-  ConfigModule.forRoot(),
+    ConfigModule.forRoot({
+      isGlobal: true,
+    }),
+    
   UsuarioModule,
   AuthModule],
   controllers: [],
