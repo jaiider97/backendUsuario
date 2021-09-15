@@ -5,14 +5,47 @@ export class signupDto{
     
     @IsNotEmpty()
     @IsString()
-    username: string;
+    usuario: string;
 
     @IsNotEmpty()
     @IsString()
-    password: string;
+    contraseña: string;
 
     @IsNotEmpty()
     @IsString()
     email: string;
+
+    @IsNotEmpty()
+    @IsString()
+    nombre: string;
+
+    @IsNotEmpty()
+    @IsString()
+    apellido: string;
+
+    
+    @IsNotEmpty()
+    @IsString()
+    edad: number;
+
+    @IsNotEmpty()
+    @IsString()
+    genero: string;
+
+    @IsNotEmpty()
+    @IsString()
+    telefono: string;
+
+    @IsNotEmpty()
+    @IsString()
+    ciudad: string;
+
+
+    @IsNotEmpty()
+    @IsString()
+    correo: string;
+
+ 
+  completed: boolean;
 
 }
