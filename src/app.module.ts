@@ -6,8 +6,7 @@ import { ConfigModule } from '@nestjs/config';
 require('dotenv').config();
 
 
-console.log("variable global",process.env.JWT_SECRET);
-console.log("variable global",process.env.HOST);
+
 
 @Module({
   imports: [
